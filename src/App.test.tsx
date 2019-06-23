@@ -1,9 +1,11 @@
-import React from 'react';
-import ReactDOM from 'react-dom';
-import App from './App';
+import React from 'react'
+import { render } from '@testing-library/react'
+import App from './App'
 
-it('renders without crashing', () => {
-  const div = document.createElement('div');
-  ReactDOM.render(<App />, div);
-  ReactDOM.unmountComponentAtNode(div);
-});
+describe(`add basic tests for App`, () => {
+  it(`renders an anchor with the required link`, () => {
+    const { getByTestId } = render(<App />)
+    let link = getByTestId('app-link')
+    expect(link.getAttribute('href')).toEqual('https://reactjs.org')
+  })
+})

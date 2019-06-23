@@ -14,7 +14,12 @@
   },
   "devDependencies": {
     "@testing-library/react": "^8.0.1",
+    "@types/prettier": "^1.16.4",
+    "cross-env": "^5.2.0",
+    "husky": "^2.4.1",
     "jest-dom": "^3.5.0",
+    "lint-staged": "^8.2.1",
+    "prettier": "^1.18.2",
     "typesync": "^0.5.1"
   },
   "scripts": {
@@ -22,7 +27,20 @@
     "start": "react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test",
+    "test:once": "cross-env CI=true npm run test",
+    "prettify": "prettier --write src/**/*.{ts,json,css,scss,md}",
     "eject": "react-scripts eject"
+  },
+  "husky": {
+    "hooks": {
+      "pre-commit": "lint-staged && npm run test:once"
+    }
+  },
+  "lint-staged": {
+    "src/**/*.{ts,json,css,scss,md}": [
+      "prettier --write",
+      "git add"
+    ]
   },
   "eslintConfig": {
     "extends": "react-app"

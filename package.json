@@ -12,7 +12,13 @@
     "react-scripts": "3.0.1",
     "typescript": "3.5.2"
   },
+  "devDependencies": {
+    "@testing-library/react": "^8.0.1",
+    "jest-dom": "^3.5.0",
+    "typesync": "^0.5.1"
+  },
   "scripts": {
+    "postinstall": "typesync",
     "start": "react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test",
@@ -32,5 +38,10 @@
       "last 1 firefox version",
       "last 1 safari version"
     ]
+  },
+  "prettier": {
+    "semi": false,
+    "singleQuote": true,
+    "trailingComma": "es5"
   }
 }

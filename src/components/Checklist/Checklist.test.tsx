@@ -48,6 +48,6 @@ describe(`check for operations on checklist`, () => {
 
     let secondItem = getByLabelText(checklistItems[1].text) as HTMLInputElement
     fireEvent.click(secondItem)
-    expect(p.textContent).toContain('1 of 2')
+    expect(p.textContent).toContain('2 of 2')
   })
 })

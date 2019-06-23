@@ -1,4 +1,4 @@
-import React, { useState } from 'react'
+import React, { useState, useMemo } from 'react'
 
 interface Checklist {
   id: number
@@ -19,6 +19,10 @@ const Checklist: React.FC<ChecklistProps> = ({ checklistItems }) => {
     updatelist(newChecklist)
   }
 
+  const checkedItems = useMemo(() => checklist.filter(c => c.checked).length, [
+    checklist,
+  ])
+
   return (
     <div>
       <ul className="checklist" data-testid="items-list">
@@ -34,6 +38,9 @@ const Checklist: React.FC<ChecklistProps> = ({ checklistItems }) => {
           </li>
         ))}
       </ul>
+      <p data-testid="checked-items">
+        Checked {checkedItems} of {checklist.length} items
+      </p>
     </div>
   )
 }

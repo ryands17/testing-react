@@ -1,4 +1,4 @@
-Testing React - Common patterns
+Testing React - Common patterns via the [react-testing-library](https://github.com/testing-library/react-testing-library)
 
 ## Available Scripts
 

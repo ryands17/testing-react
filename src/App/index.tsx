@@ -1,5 +1,6 @@
 import React from 'react'
 import './App.css'
+import Checklist from 'components/Checklist/Checklist'
 
 const App: React.FC = () => {
   return (
@@ -15,6 +16,7 @@ const App: React.FC = () => {
           React + Testing
         </a>
       </h1>
+      <Checklist />
     </div>
   )
 }

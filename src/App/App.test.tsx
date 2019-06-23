@@ -1,6 +1,6 @@
 import React from 'react'
 import { render } from '@testing-library/react'
-import App from './App'
+import App from './index'
 
 describe(`add basic tests for App`, () => {
   it(`renders an anchor with the required link`, () => {

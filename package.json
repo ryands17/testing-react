@@ -28,7 +28,7 @@
     "build": "react-scripts build",
     "test": "react-scripts test",
     "test:once": "cross-env CI=true npm run test",
-    "prettify": "prettier --write src/**/*.{ts,json,css,scss,md}",
+    "prettify": "prettier --write src/**/*.{ts,tsx,json,css,scss,md}",
     "eject": "react-scripts eject"
   },
   "husky": {
@@ -37,7 +37,7 @@
     }
   },
   "lint-staged": {
-    "src/**/*.{ts,json,css,scss,md}": [
+    "src/**/*.{ts,tsx,json,css,scss,md}": [
       "prettier --write",
       "git add"
     ]

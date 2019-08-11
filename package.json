@@ -15,15 +15,18 @@
   "devDependencies": {
     "@testing-library/jest-dom": "^4.0.0",
     "@testing-library/react": "^9.1.0",
+    "@react-mock/fetch": "^0.3.0",
+    "@types/node-fetch": "^2.3.7",
     "@types/prettier": "^1.16.4",
     "cross-env": "^5.2.0",
     "husky": "^3.0.3",
     "lint-staged": "^9.2.1",
+    "node-fetch": "^2.6.0",
     "prettier": "^1.18.2",
     "typesync": "^0.5.2"
   },
   "scripts": {
-    "postinstall": "typesync",
+    "sync:types": "typesync",
     "start": "react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test",

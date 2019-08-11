@@ -1,7 +1,7 @@
 import React from 'react'
 import './App.css'
-// import Checklist from 'components/Checklist/Checklist'
-import Users from 'components/Users/Users'
+import Checklist from 'components/Checklist/Checklist'
+// import Users from 'components/Users/Users'
 
 const checklistItems = [
   {
@@ -30,8 +30,8 @@ const App: React.FC = () => {
           React + Testing
         </a>
       </h1>
-      {/* <Checklist checklistItems={checklistItems} /> */}
-      <Users />
+      <Checklist checklistItems={checklistItems} />
+      {/* <Users /> */}
     </div>
   )
 }

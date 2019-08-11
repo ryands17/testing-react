@@ -7,11 +7,11 @@ interface Checklist {
 }
 
 interface ChecklistProps {
-  checklistItems?: Checklist[]
+  checklistItems: Checklist[]
 }
 
-const Checklist: React.FC<ChecklistProps> = ({ checklistItems }) => {
-  let [checklist, updatelist] = useState<Checklist[]>(checklistItems || [])
+const Checklist: React.FC<ChecklistProps> = ({ checklistItems = [] }) => {
+  let [checklist, updatelist] = useState<Checklist[]>(checklistItems)
 
   const toggleComplete = (index: number) => {
     let newChecklist = [...checklist]
@@ -19,7 +19,7 @@ const Checklist: React.FC<ChecklistProps> = ({ checklistItems }) => {
     updatelist(newChecklist)
   }
 
-  const checkedItems = useMemo(() => checklist.filter(c => c.checked).length, [
+  let checkedItems = useMemo(() => checklist.filter(c => c.checked).length, [
     checklist,
   ])
 

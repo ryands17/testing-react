@@ -15,7 +15,7 @@ const checklistItems = [
   },
 ]
 
-test(`has rendered a default of 2 items`, () => {
+test(`has rendered a the items passed correctly`, () => {
   const { getByTestId } = render(<Checklist checklistItems={checklistItems} />)
   let ul = getByTestId('items-list')
   expect(ul.children.length).toEqual(2)
@@ -33,7 +33,7 @@ test(`updates UI of checked item on toggling`, () => {
   expect(firstItem.checked).toBeFalsy()
 })
 
-test(`shows the checked item length`, () => {
+test(`correctly shows the checked item length`, () => {
   const { getByTestId, getByLabelText } = render(
     <Checklist checklistItems={checklistItems} />
   )

@@ -7,7 +7,7 @@ interface Checklist {
 }
 
 interface ChecklistProps {
-  checklistItems: Checklist[]
+  checklistItems?: Checklist[]
 }
 
 const Checklist: React.FC<ChecklistProps> = ({ checklistItems = [] }) => {

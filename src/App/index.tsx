@@ -3,19 +3,6 @@ import './App.css'
 import Checklist from 'components/Checklist/Checklist'
 // import Users from 'components/Users/Users'
 
-const checklistItems = [
-  {
-    id: 1,
-    text: 'Learn React Testing Library',
-    checked: false,
-  },
-  {
-    id: 2,
-    text: 'Learn Advanced JS concepts',
-    checked: false,
-  },
-]
-
 const App: React.FC = () => {
   return (
     <div className="App">
@@ -30,7 +17,7 @@ const App: React.FC = () => {
           React + Testing
         </a>
       </h1>
-      <Checklist checklistItems={checklistItems} />
+      <Checklist />
       {/* <Users /> */}
     </div>
   )

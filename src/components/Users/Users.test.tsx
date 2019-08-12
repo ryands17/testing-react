@@ -30,7 +30,7 @@ const renderUsers = () => {
   )
 }
 
-it(`should render the users list`, async () => {
+test(`should render the users list`, async () => {
   const { getByTestId } = renderUsers()
   expect(getByTestId('loader')).toBeInTheDocument()
   let userList = await waitForElement(() => getByTestId('user-list'))

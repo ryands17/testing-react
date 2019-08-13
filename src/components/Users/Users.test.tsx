@@ -31,8 +31,9 @@ const renderUsers = () => {
 }
 
 test(`should render the users list`, async () => {
-  const { getByTestId } = renderUsers()
+  const { getByTestId, getByRole } = renderUsers()
   expect(getByTestId('loader')).toBeInTheDocument()
-  let userList = await waitForElement(() => getByTestId('user-list'))
+
+  let userList = await waitForElement(() => getByRole('list'))
   expect(userList.children.length).toEqual(users.length)
 })

@@ -16,8 +16,8 @@ const checklistItems = [
 ]
 
 test(`has rendered a the items passed correctly`, () => {
-  const { getByTestId } = render(<Checklist checklistItems={checklistItems} />)
-  let ul = getByTestId('items-list')
+  const { getByRole } = render(<Checklist checklistItems={checklistItems} />)
+  let ul = getByRole('list')
   expect(ul.children.length).toEqual(2)
 })
 

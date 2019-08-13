@@ -25,7 +25,7 @@ const Checklist: React.FC<ChecklistProps> = ({ checklistItems = [] }) => {
 
   return (
     <div>
-      <ul className="checklist" data-testid="items-list">
+      <ul className="checklist">
         {checklist.map((checkitem, index) => (
           <li key={checkitem.id} className="list-item">
             <input

@@ -17,7 +17,7 @@ const Users: React.FC = () => {
   return loading ? (
     <p data-testid="loader">Loading ...</p>
   ) : (
-    <ul data-testid="user-list" style={{ listStyle: 'none' }}>
+    <ul style={{ listStyle: 'none' }}>
       {users.map(user => (
         <li key={user.id}>
           {user.name} ({user.email})

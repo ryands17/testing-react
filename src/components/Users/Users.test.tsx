@@ -1,5 +1,5 @@
 import React from 'react'
-import { render, waitForElement } from '@testing-library/react'
+import { render } from '@testing-library/react'
 import { FetchMock } from '@react-mock/fetch'
 import Users from './Users'
 import { User } from 'types/users'

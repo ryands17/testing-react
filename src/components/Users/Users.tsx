@@ -15,7 +15,7 @@ const Users: React.FC = () => {
   }, [])
 
   return loading ? (
-    <p data-testid="loader">Loading ...</p>
+    <p aria-label="loading">Loading ...</p>
   ) : (
     <ul style={{ listStyle: 'none' }}>
       {users.map(user => (

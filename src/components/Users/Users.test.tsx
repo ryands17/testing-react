@@ -31,9 +31,12 @@ const renderUsers = () => {
 }
 
 test(`should render the users list`, async () => {
-  const { getByTestId, getByRole } = renderUsers()
-  expect(getByTestId('loader')).toBeInTheDocument()
+  const { getByLabelText, findByRole } = renderUsers()
+  expect(getByLabelText('loading')).toBeInTheDocument()
 
-  let userList = await waitForElement(() => getByRole('list'))
+  let userList = await findByRole('list')
   expect(userList.children.length).toEqual(users.length)
+  expect(userList.textContent).toMatchInlineSnapshot(
+    `"Leanne Graham (Sincere@april.biz)Ervin Howell (Shanna@melissa.tv)"`
+  )
 })

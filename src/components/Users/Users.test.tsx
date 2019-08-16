@@ -2,9 +2,9 @@ import React from 'react'
 import { render } from '@testing-library/react'
 import { FetchMock } from '@react-mock/fetch'
 import Users from './Users'
-import { User } from 'types/users'
+import { IUser } from 'types/users'
 
-const users: Partial<User>[] = [
+const users: Partial<IUser>[] = [
   {
     id: 1,
     name: 'Leanne Graham',

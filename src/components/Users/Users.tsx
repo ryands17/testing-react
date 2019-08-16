@@ -1,9 +1,9 @@
 import React, { useEffect, useState } from 'react'
-import { User } from 'types/users'
+import { IUser } from 'types/users'
 import { getUsers } from 'services/users'
 
 const Users: React.FC = () => {
-  let [users, setUsers] = useState<User[]>([])
+  let [users, setUsers] = useState<IUser[]>([])
   let [loading, setLoading] = useState(false)
 
   useEffect(() => {
@@ -11,12 +11,14 @@ const Users: React.FC = () => {
     getUsers()
       .then(users => setUsers(users))
       .catch(console.error)
-      .then(() => setLoading(false))
+      .finally(() => setLoading(false))
   }, [])
 
-  return loading ? (
-    <p aria-label="loading">Loading ...</p>
-  ) : (
+  if (loading) {
+    return <p aria-label="loading">Loading ...</p>
+  }
+
+  return (
     <ul style={{ listStyle: 'none' }}>
       {users.map(user => (
         <li key={user.id}>

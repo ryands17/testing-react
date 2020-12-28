@@ -1388,10 +1388,10 @@
   resolved "https://registry.yarnpkg.com/@types/normalize-package-data/-/normalize-package-data-2.4.0.tgz#e486d0d97396d79beedd0a6e33f4534ff6b4973e"
   integrity sha512-f5j5b/Gf71L+dbqxIpQ4Z2WlmI/mPJ0fOkGGmFgtb6sAu97EPczzbS3/tJKxmcYDj55OX6ssqwDAWOHIYDRDGA==
 
-"@types/prettier@^1.18.2":
-  version "1.18.2"
-  resolved "https://registry.yarnpkg.com/@types/prettier/-/prettier-1.18.2.tgz#069e7d132024d436fd1f5771f6932426a695f230"
-  integrity sha512-2JBasa5Qaj81Qsp/dxX2Njy+MdKC767WytHUDsRM7TYEfQvKPxsnGpnCBlBS1i2Aiv1YwCpmKSbQ6O6v8TpiKg==
+"@types/prettier@^2.1.6":
+  version "2.1.6"
+  resolved "https://registry.yarnpkg.com/@types/prettier/-/prettier-2.1.6.tgz#f4b1efa784e8db479cdb8b14403e2144b1e9ff03"
+  integrity sha512-6gOkRe7OIioWAXfnO/2lFiv+SJichKVSys1mSsgyrYHSEjk8Ctv4tSR/Odvnu+HWlH2C8j53dahU03XmQdd5fA==
 
 "@types/prop-types@*":
   version "15.7.1"
